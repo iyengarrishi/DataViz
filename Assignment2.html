@@ -90,9 +90,39 @@
 			     * Let's make this one his main rivals and their details
 			     */
 				
-				var Rivals = ["Carmelo Anthony", {"age":29, "height":"203cm", "weight":"235lb"}, "Lebron James", {"age":29, "height":"203cm", "weight":"250lb",}, "Derrick Rose", {"age":25, "height":"191cm", "weight":"190lb"}];
+				var Rivals = ["Carmelo Anthony", {"age1":29, "height1":"203cm", "weight1":"235lb"}, "Lebron James", {"age2":29, "height2":"203cm", "weight2":"250lb",}, "Derrick Rose", {"age3":25, "height3":"191cm", "weight3":"190lb"}];
 				console.log (Rivals);
 				
+				//Not sure why the last guy's weight is showing up white instead of green. Seems to be fine on the console. Third commit.
+			
+			// Thought this might work better as an object within an object, but got too confused so abandoned that idea.
+			
+			//Now I'll pick something out of this array and console log it. Let's say Carmelo Anthony's name. No wait, Derrick Rose. Melo sucks.
+			
+			//So that didn't work. I'm guessing because of the space. Thought it might not, but wanted to try. Let's check age
+			
+			console.log (Rivals.age);
+			
+			/*It says undefined. Three pairs of identical keys seems to be the problem. Let me change those around.
+			 * How about age1, age2, age3 and so on? Let's check.
+			 */
+			
+			console.log (Rivals.height2);
+			//still saying undefined. Let me go back to my object-object strategy, combined with naming each key separately
+			
+			var rivals = {"CarmeloAnthony":{"age1":29, "height1":"203cm", "weight1":"235lb"}, "LebronJames":{"age2":29, "height2":"203cm", "weight2":"250lb"}, "DerrickRose":{"age3":25, "height3":"191cm", "weight3":"190lb"}};
+			console.log (rivals);
+			//Last value is still in white. Some sort of limit, maybe? Now for the moment of truth
+			
+			console.log (rivals.age1);
+			
+			//Nope. What if I remove the spaces in the player names?
+			
+			console.log (rivals.CarmeloAnthony);
+			
+			
+			
+			
 			</script>
 	</body>
 </html>
