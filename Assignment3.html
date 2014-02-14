@@ -32,6 +32,23 @@
 			
 			for (var i=0; i<6; i++){
 				console.log(i);
+				//creating a new variable to encompass every i of the list myBooks. Calling it thisBook
+				var thisBook = myBooks [i];
+				console.log(thisBook);
+				
+				//Now comes my if/else statement that will sort the books
+				
+				if(thisBook.genre == "fiction"){
+					console.log(thisBook);
+					//If the genre of the book is fiction, add it to Fiction
+					Fiction.push(thisBook);
+				}else{
+					//Otherwise, add the book to nonFiction
+					nonFiction.push(thisBook);
+				}
+				//This is the end of my if/else statement
+			    
+			    
 				
 				
 				
